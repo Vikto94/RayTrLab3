@@ -1,0 +1,51 @@
+- camera:
+   position: {x: 0, y: -300, z: 0}
+   orientation: {h: 0, p: 0, r: 0}
+   fov_x: 80
+   fov_y: 75
+   
+- light:
+   - point:
+      - pos: {x: 3000, y: 0, z: 3000}
+      - pow: {amb_r: 0, amb_g: 0, amb_b: 0, dif_r: 0, dif_g: 0, dif_b: 0, spe_r: 200, spe_g: 0, spe_b: 0}
+   - sphere:
+      - pos: {x: -1200, y: 0, z: 1200}
+      - pow: {amb_r: 0, amb_g: 0, amb_b: 0, dif_r: 0, dif_g: 0, dif_b: 0, spe_r: 0, spe_g: 200, spe_b: 200}
+	  - radius: 81
+
+- node:
+   - lcs: {x: 0, y: 0, z: 0, h: 0, p: 0, r: 0, sx: 1, sy: 1, sz: 1}
+   - node:
+     - lcs: {x: -120, y: 0, z: 120, h: 0, p: 0, r: 0, sx: 1, sy: 1, sz: 1}
+     - material: {amb_r: 10, amb_g: 10, amb_b: 10, dif_r: 30, dif_g: 0, dif_b: 0, spe_r: 10, spe_g: 10, spe_b: 0, col_r: 0, col_g: 200, col_b: 0, a: 0}
+         - sphere: 
+           radius: 80
+   - node:
+     - lcs: {x: 110, y: 0, z: -110, h: 0, p: 0, r: 0, sx: 1, sy: 1, sz: 1}
+     - material: {amb_r: 10, amb_g: 10, amb_b: 10, dif_r: 5, dif_g: 0, dif_b: 0, spe_r: 1, spe_g: 10, spe_b: 10, col_r: 0, col_g: 200, col_b: 0, a: 2}
+         - sphere: 
+           radius: 190
+   
+   
+#   - csg_union:
+#   - csg_difference:
+#   - csg_intersection:
+#      - left_node:
+#         - sphere: 
+#            radius: 190
+#      - left_node:
+#         - sphere: 
+#            radius: 100
+#      - right_node:
+#         - cone: 
+#           radius: 500
+#	        height: 200
+#      - right_node:
+#         - torus: 
+#           radius: 500
+#	        tube_radius: 200
+#   - node: 
+#      - lcs: {x: 0, y: 0, z: 0, h: 0, p: 0, r: 0, sx: 0.01, sy: 0.01, sz: 0.01}
+#      - obj_model: 
+#          file_name: "SwordMinecraft.obj"
+   
